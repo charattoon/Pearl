@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -78,15 +80,20 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-    }
+        AdRequest.Builder adBuilder = new AdRequest.Builder();
+        AdRequest adRequest = adBuilder.build();
+        AdView adView = (AdView) findViewById(R.id.adView);
+        adView.getBottom();
+        adView.loadAd(adRequest);
 
+    }
 
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.menu_detail, menu);
-        // Return true to display menu
+    // Return true to display menu
 //        return true;
 
 //    }
@@ -94,19 +101,17 @@ public class DetailActivity extends AppCompatActivity {
 
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+    // Handle action bar item clicks here. The action bar will
+    // automatically handle clicks on the Home/Up button, so long
+    // as you specify a parent activity in AndroidManifest.xml.
 //        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+    //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_share) {
 //            return true;
 
 //        return super.onOptionsItemSelected(item);
 //    }
-
-
 
 
     /**
@@ -199,4 +204,5 @@ public class DetailActivity extends AppCompatActivity {
             return data.get(position).getName();
         }
     }
+
 }
