@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">นี่มุขหรือเปลือกหอย</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_share">Share</string>
+</resources>
